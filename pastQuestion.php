@@ -32,14 +32,24 @@
                     </div>
                 </section>
 
-                <div class="page-inner pt-none">
+                <div class="page-inner pt-none mt-5">
                     <div class="container-fluid ">
                         <div class="row">
+                            <div class="col-md-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-2">
-                                <div class="card m-b-30">
+                                <div class="card m-b-30 m-t-30">
                                     <div class="card-body">
-
-                                        <div class="accordion" id="accordionExample">
+                                        <div class="accordion " id="accordionExample">
                                             <div class="card">
                                                 <div class="card-header" id="headingOne">
                                                     <h5 class="mb-0">
@@ -63,19 +73,49 @@
 
                                                                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#hndLevelAccordion">
                                                                     <div class="card-body">
-                                                                        HND Level 100
+                                                                        <div class="accordion" id="hndLevel100Sem">
+                                                                            <div class="card">
+                                                                                <div class="card-header" id="headingOne">
+                                                                                    <h5 class="mb-0">
+                                                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#sem1" aria-expanded="true" aria-controls="sem1">
+                                                                                            Sem 1
+                                                                                        </button>
+                                                                                    </h5>
+                                                                                </div>
+
+                                                                                <div id="sem1" class="collapse" aria-labelledby="headingOne" data-parent="#hndLevel100Sem">
+                                                                                    <div class="card-body">
+                                                                                        Sem 1
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="card">
+                                                                                <div class="card-header" id="headingTwo">
+                                                                                    <h5 class="mb-0">
+                                                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                                            SEm 2
+                                                                                        </button>
+                                                                                    </h5>
+                                                                                </div>
+                                                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#hndLevel100Sem">
+                                                                                    <div class="card-body">
+                                                                                        SEm 2
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="card">
                                                                 <div class="card-header" id="headingTwo">
                                                                     <h5 class="mb-0">
-                                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#hndLevel200" aria-expanded="false" aria-controls="hndLevel200">
                                                                             Level 200
                                                                         </button>
                                                                     </h5>
                                                                 </div>
-                                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#hndLevelAccordion">
+                                                                <div id="hndLevel200" class="collapse" aria-labelledby="headingTwo" data-parent="#hndLevelAccordion">
                                                                     <div class="card-body">
                                                                         HND Level 200
                                                                     </div>
@@ -130,9 +170,14 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
+                            </div><!-- End column 2 -->
+                            <div class="col-lg-8 ">
+                                <?php
+                                include 'pastQuestion/hnd/lvl100/sem1.php';
+                                include 'pastQuestion/hnd/lvl100/sem2.php';
+                                ?>
                             </div>
                         </div>
                     </div>
