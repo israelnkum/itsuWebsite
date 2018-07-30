@@ -59,7 +59,7 @@
                                                     </h5>
                                                 </div>
 
-                                                <div id="hnd" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div id="hnd" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                     <div class="card-body">
                                                         <div class="accordion" id="hndLevelAccordion">
                                                             <div class="card">
@@ -77,17 +77,20 @@
                                                                             <div class="card">
                                                                                 <div class="card-header" id="headingOne">
                                                                                     <h5 class="mb-0">
-                                                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#sem1" aria-expanded="true" aria-controls="sem1">
-                                                                                            Sem 1
-                                                                                        </button>
+                                                                                        <form method="post" action="pastQuestion.php">
+                                                                                            <button value="hndLevelSemesterI" class="btn btn-link" type="submit" name="submit">Semester I</button>
+                                                                                        </form>
+<!--                                                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#sem1" aria-expanded="true" aria-controls="sem1">-->
+<!--                                                                                            Sem 1-->
+<!--                                                                                        </button>-->
                                                                                     </h5>
                                                                                 </div>
 
-                                                                                <div id="sem1" class="collapse" aria-labelledby="headingOne" data-parent="#hndLevel100Sem">
-                                                                                    <div class="card-body">
-                                                                                        Sem 1
-                                                                                    </div>
-                                                                                </div>
+<!--                                                                                <div id="sem1" class="collapse" aria-labelledby="headingOne" data-parent="#hndLevel100Sem">-->
+<!--                                                                                    <div class="card-body">-->
+<!--                                                                                        Sem 1-->
+<!--                                                                                    </div>-->
+<!--                                                                                </div>-->
                                                                             </div>
                                                                             <div class="card">
                                                                                 <div class="card-header" id="headingTwo">
@@ -175,8 +178,9 @@
                             </div><!-- End column 2 -->
                             <div class="col-lg-8 ">
                                 <?php
-                                include 'pastQuestion/hnd/lvl100/sem1.php';
-                                include 'pastQuestion/hnd/lvl100/sem2.php';
+                               if (isset($_POST['submit'])){
+                                   echo("osikani");
+                               }
                                 ?>
                             </div>
                         </div>
